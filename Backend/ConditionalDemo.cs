@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HelloWorld.Backend
 {
-    static internal class ConditionalDemo
+    internal class ConditionalDemo
     {
 
         public static readonly int num, target, range;
@@ -52,7 +52,7 @@ namespace HelloWorld.Backend
             {
                 return false;
             }
-            else if ((num % target) <= range)
+            else if (Math.Abs((num % target)) <= range)
             {
                 return true;
             }

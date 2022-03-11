@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using HelloWorld.Backend;
 using static HelloWorld.Backend.ConditionalDemo;
 
-
 namespace HelloWorld
 {
     class Controller
@@ -20,9 +19,17 @@ namespace HelloWorld
 
             //Tip tester3 = new Tip();
             //tester3.Run();
-            
-            Console.WriteLine($"Given num {ConditionalDemo.num}, target {ConditionalDemo.target}, and {ConditionalDemo.range}" +
-                $". The result is: {ConditionalDemo.IsWithinRange().ToString()}");
+
+
+            //String tOrF = ConditionalDemo.IsWithinRange() ? "In range" : "Out of range";
+
+            //Console.WriteLine($"Given num {ConditionalDemo.num}, target {ConditionalDemo.target}, and {ConditionalDemo.range}" +
+            //    $". The result is: {tOrF}");
+
+
+            //Console.WriteLine($"Out: {SumBetween(1, 3)}");
+
+            RoomManager.Run();
         }
     }
 }
