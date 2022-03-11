@@ -94,6 +94,7 @@ namespace HelloWorld.Backend
                 Guest guest = new Guest(ID_LIST, name);
                 UserList.Add(ID_LIST, guest);
                 PrintGuest(ID_LIST);
+                
 
             }
             else 
@@ -102,6 +103,8 @@ namespace HelloWorld.Backend
                 UserList.Add(ID_LIST, guest);
                 PrintGuest(ID_LIST);
             }
+            ID_LIST++;
+
         }
         private static void PrintRooms() 
         {
@@ -130,6 +133,7 @@ namespace HelloWorld.Backend
                     {
                         case "1":
                             value.checkedIn = true;
+
                             break;
                         case "2":
                             value.checkedIn = false;
