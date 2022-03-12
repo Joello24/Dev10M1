@@ -21,6 +21,7 @@ namespace HelloWorld.Backend
             {
                 instructions();
                 input = Console.ReadLine();
+                Console.ResetColor();
                 if (input == "q")
                 {
                     break;
@@ -33,13 +34,17 @@ namespace HelloWorld.Backend
         }
 
         public static void instructions() {
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("\nINSTRUCTIONS");
             Console.WriteLine("--------------------------");
+            Console.ResetColor();
             Console.WriteLine("Add Guest - touch");
             Console.WriteLine("Manage Guest - cd id | name");
             Console.WriteLine("List Guests - ls");
             Console.WriteLine("Exit Hotel Manager - q");
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("--------------------------");
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("~ ");
         }
 
@@ -85,7 +90,7 @@ namespace HelloWorld.Backend
             if (input == "y" | input == "Y")
             {
                 PrintRooms();
-                Console.WriteLine("Enter a new room number");
+                Console.WriteLine("Enter a room number: ");
                 int temp = int.Parse(Console.ReadLine());
                 if (rooms[temp] == true)
                 {
@@ -104,7 +109,6 @@ namespace HelloWorld.Backend
                 PrintGuest(ID_LIST);
             }
             ID_LIST++;
-
         }
         private static void PrintRooms() 
         {
@@ -132,8 +136,15 @@ namespace HelloWorld.Backend
                     switch (input)
                     {
                         case "1":
-                            value.checkedIn = true;
-
+                            if (value.roomNumber >= 0 && value.roomNumber <= 10)
+                            {
+                                value.checkedIn = true;
+                                rooms[value.roomNumber] = true;
+                            }
+                            else 
+                            {
+                                Console.WriteLine("You must select a room before checking in");
+                            }
                             break;
                         case "2":
                             value.checkedIn = false;
@@ -142,16 +153,22 @@ namespace HelloWorld.Backend
                             PrintRooms();
                             Console.WriteLine("Enter a new room number");
                             int temp = int.Parse(Console.ReadLine());
-                            if (rooms[temp] == false) { 
+                            if (rooms[temp] == false)
+                            {
                                 value.roomNumber = temp;
                             }
+                            else 
+                            {
+                                Console.WriteLine("That room is occupied, please select a different room!");
+                            }
+                            break;
+                        case "q":
                             break;
                     }
                 }
             } while (input != "q");
             value.name = "Jimmy";
         }
-
         private static void ManageGuestInstructions(Guest guest)
         {
             Console.WriteLine("\nManaging Guest:");
@@ -164,7 +181,6 @@ namespace HelloWorld.Backend
             Console.WriteLine("-------------------");
             Console.Write($"~ {guest.name}: ");
         }
-
         private static void PrintGuest(int id) 
         {
             UserList.TryGetValue(id, out Guest value);
