@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "0rgn1NPU/X065TjzO/9rJ0/odAf1wLnwGMf8OrOPzRqrd0nDymvF3DMUIrU0Kozli//PHqjrEJ3209CM/mMx8g==",
+  "dgSpecHash": "7aGK18xR6vNUPK8izubK8uwF2aENpNrtqFmZelmARn5XpoYmTNLVoyBh+kc3je0vGKTJCGYHTGXd8mryXblKZw==",
   "success": true,
   "projectFilePath": "Q:\\Dev10\\HelloWorld\\HelloWorld.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Joello\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.15\\microsoft.netcore.app.host.win-x64.5.0.15.nupkg.sha512"
+  ],
   "logs": []
 }

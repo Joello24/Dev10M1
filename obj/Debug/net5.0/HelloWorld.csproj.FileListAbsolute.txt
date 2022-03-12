@@ -3,7 +3,6 @@ Q:\Dev10\HelloWorld\bin\Debug\net5.0\HelloWorld.deps.json
 Q:\Dev10\HelloWorld\bin\Debug\net5.0\HelloWorld.runtimeconfig.json
 Q:\Dev10\HelloWorld\bin\Debug\net5.0\HelloWorld.runtimeconfig.dev.json
 Q:\Dev10\HelloWorld\bin\Debug\net5.0\HelloWorld.dll
-Q:\Dev10\HelloWorld\bin\Debug\net5.0\ref\HelloWorld.dll
 Q:\Dev10\HelloWorld\bin\Debug\net5.0\HelloWorld.pdb
 Q:\Dev10\HelloWorld\obj\Debug\net5.0\HelloWorld.csproj.AssemblyReference.cache
 Q:\Dev10\HelloWorld\obj\Debug\net5.0\HelloWorld.GeneratedMSBuildEditorConfig.editorconfig
@@ -14,3 +13,4 @@ Q:\Dev10\HelloWorld\obj\Debug\net5.0\HelloWorld.dll
 Q:\Dev10\HelloWorld\obj\Debug\net5.0\ref\HelloWorld.dll
 Q:\Dev10\HelloWorld\obj\Debug\net5.0\HelloWorld.pdb
 Q:\Dev10\HelloWorld\obj\Debug\net5.0\HelloWorld.genruntimeconfig.cache
+Q:\Dev10\HelloWorld\obj\Debug\net5.0\refint\HelloWorld.dll
